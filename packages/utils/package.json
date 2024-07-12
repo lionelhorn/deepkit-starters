@@ -1,0 +1,11 @@
+{
+  "name": "@lionelhorn/utils",
+  "version": "0.0.1",
+  "type": "module",
+  "sideEffects": false,
+  "typings": "./src/index.d.ts",
+  "exports": {
+    ".": "./src/index.js",
+    "./lib/*": "./src/lib/*"
+  }
+}

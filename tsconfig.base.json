@@ -17,6 +17,7 @@
     "paths": {
       "@lionelhorn/deepkit-client": ["packages/deepkit-client/src/index.ts"],
       "@lionelhorn/deepkit-server": ["packages/deepkit-server/src/index.ts"],
+      "@lionelhorn/utils": ["packages/utils/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
