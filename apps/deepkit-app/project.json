@@ -1,0 +1,16 @@
+{
+  "name": "deepkit-app",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/deepkit-app/src",
+  "projectType": "application",
+  "targets": {
+    "dev": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "apps/deepkit-app",
+        "command": "vite-node --config=vite.config.ts --root . ./src/app.ts"
+      }
+    }
+  },
+  "tags": []
+}

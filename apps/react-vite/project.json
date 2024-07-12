@@ -1,0 +1,16 @@
+{
+  "name": "react-vite",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/react-vite",
+  "projectType": "application",
+  "targets": {
+    "dev": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "apps/react-vite",
+        "command": "vite dev"
+      }
+    }
+  },
+  "tags": []
+}

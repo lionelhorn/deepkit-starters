@@ -1,0 +1,23 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "ES2022",
+    "lib": ["esnext", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@lionelhorn/deepkit-client": ["packages/deepkit-client/src/index.ts"],
+      "@lionelhorn/deepkit-server": ["packages/deepkit-server/src/index.ts"],
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}
