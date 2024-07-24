@@ -1,5 +1,5 @@
 /** @type {import("tailwindcss").Config} */
-const config = {
+export default  {
   content: [
     "./src/**/*.{html,js,jsx,tsx}",
   ],
@@ -17,12 +17,3 @@ const config = {
     }
   }
 };
-
-// Using this because tailwind based design are messed up in shadow dom
-// https://github.com/tailwindlabs/tailwindcss/discussions/3768#discussioncomment-1218745
-const { replaceTailwindUnit, toEM, toPX } = require("tailwind-unit-replace");
-
-module.exports = replaceTailwindUnit({
-  exclude: ["fontFamily"],
-  replacer: toEM // or `toPX` to convert to pixel (16-based)
-})(config);

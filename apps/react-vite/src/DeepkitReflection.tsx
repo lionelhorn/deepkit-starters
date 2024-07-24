@@ -1,21 +1,21 @@
-import {cast, MinLength} from "@deepkit/type";
+import {cast, MinLength, ReflectionClass} from "@deepkit/type";
+
+class User {
+  id: number = 0;
+  username: string = "";
+  password: string = "";
+}
+
 
 export const DeepkitReflection = () => {
-  interface User {
-    username: string & MinLength<3>;
-    birthDate?: Date;
-  }
 
-  const user = cast<User>({
-    username: 'Peter',
-    birthDate: '2010-10-10T00:00:00Z'
-  });
+  const rc = ReflectionClass.from<User>();
+  const ps = rc.getProperties();
 
-  console.log(user.birthDate);
-  console.log(user.birthDate instanceof Date);
+  console.log("Reflection", ps)
 
   return (
-    <div>
+    <div className={"bg-blue-100 rounded p-1"}>
       <h1>Deepkit Reflection</h1>
       <p>
         Open devtools to see some logs.
