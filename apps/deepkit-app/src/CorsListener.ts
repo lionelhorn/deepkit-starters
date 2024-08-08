@@ -8,8 +8,9 @@ export class CorsListener {
   protected headers = {
     'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Methods': 'OPTIONS, POST, GET, PUT',
-    'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
+    'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, X-Message-Type',
     'Access-Control-Max-Age': 2592000, // 30 days
+    'Access-Control-Expose-Headers': "x-message-type, x-message-composite, x-message-routetype"
   }
 
   @eventDispatcher.listen(httpWorkflow.onRequest)

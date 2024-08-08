@@ -1,6 +1,6 @@
 import {App} from '@deepkit/app';
 import {FrameworkModule} from '@deepkit/framework';
-import {DateController, UserController} from "@lionelhorn/utils";
+import {RpcController, UserController} from "@lionelhorn/utils";
 import {CorsListener} from "./CorsListener";
 
 const app = new App({
@@ -11,7 +11,7 @@ const app = new App({
   ],
   controllers: [
     UserController,
-    DateController
+    RpcController
   ],
   imports: [
     new FrameworkModule({

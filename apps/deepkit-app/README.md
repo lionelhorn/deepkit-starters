@@ -8,4 +8,4 @@ Executed via vite-node
 
 ```shell
 nx run deepkit-app:dev
-``
+```
