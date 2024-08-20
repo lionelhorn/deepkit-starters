@@ -1,4 +1,5 @@
-import {cast, MinLength, ReflectionClass} from "@deepkit/type";
+import {cast, defaultValue, MinLength, ReflectionClass, typeOf} from "@deepkit/type";
+import {MinMaxPositive} from "@lionelhorn/utils";
 
 class User {
   id: number = 0;
@@ -13,6 +14,15 @@ export const DeepkitReflection = () => {
   const ps = rc.getProperties();
 
   console.log("Reflection", ps)
+
+  class SearchableAttributes {
+    parcel?: {
+      area?: MinMaxPositive
+    }
+  }
+
+  const dv = defaultValue(typeOf<SearchableAttributes>());
+  console.log(dv);
 
   return (
     <div className={"bg-blue-100 rounded p-1"}>
